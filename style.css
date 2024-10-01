@@ -1,0 +1,797 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+
+html {
+    font-size: 62.5%; /* For easier rem calculations */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-padding-top: 6rem; /* Padding for scroll */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+section {
+    padding: 2rem 9%; /* Padding for sections */
+}
+
+/* Heading Styles */
+.heading {
+    text-align: center;
+    font-size: 4rem; /* Large font size */
+    color: #333; /* Dark color */
+    padding: 1rem; /* Padding around heading */
+    margin: 2rem 0; /* Margin for spacing */
+    background: rgba(225, 51, 153, 0.5); /* Corrected background color */
+}
+
+.heading span {
+    color: rgb(12, 12, 12); /* Color for span text */
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block; /* Inline-block for button */
+    margin-top: 1rem; /* Margin above button */
+    border-radius: 5rem; /* Rounded corners */
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 0.9rem 3.5rem; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.7rem; /* Font size */
+}
+
+.btn:hover {
+    color: antiquewhite; /* Hover color for button */
+}
+
+/* Header Styles */
+header {
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    background-color: aliceblue; /* Light background */
+    padding: 2rem 9%; /* Padding for header */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    z-index: 1000; /* Ensure it is on top */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Logo Styles */
+header .logo {
+    font-size: 3rem; /* Logo font size */
+    color: #333; /* Dark color */
+    font-weight: bolder; /* Bolder text */
+}
+
+header .logo span {
+    color: pink; /* Color for logo span */
+}
+
+/* Navbar Styles */
+header .navbar {
+    display: flex; /* Flexbox layout for navbar */
+    flex: 1; /* Allow navbar to grow */
+    justify-content: center; /* Center align navbar items */
+}
+
+header .navbar a {
+    font-size: 2rem; /* Navbar link font size */
+    padding: 0 1.5rem; /* Padding for links */
+    color: #666; /* Grey color */
+}
+
+header .navbar a:hover {
+    background-color: plum; /* Hover background for links */
+}
+
+/* Icon Styles */
+header .icon {
+    display: flex; /* Flexbox layout for icons */
+    align-items: center; /* Center align icons */
+}
+
+header .icon a {
+    font-size: 1.5rem; /* Icon link font size */
+    color: #333; /* Dark color */
+    margin-left: 2rem; /* Spacing between icons */
+}
+
+header .icon a:hover {
+    color: rgb(122, 23, 122); /* Hover color for icons */
+}
+
+/* Toggler Styles */
+header #toggler {
+    display: none; /* Hide toggler by default */
+}
+
+header .fa-bars {
+    font-size: 3rem; /* Font size for toggle icon */
+    color: #333; /* Dark color */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 0.5rem 1.5rem; /* Padding for toggle icon */
+    cursor: pointer; /* Pointer cursor */
+    display: none; /* Hide by default */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Padding for the footer */
+    max-width: 1200px; /* Maximum width of the footer */
+    margin: auto; /* Center the footer */
+}
+
+.box-con {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space out boxes evenly */
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+    padding: 0 2%; /* Padding for box container */
+}
+
+.box {
+    flex: 1; /* Flex property for responsive boxes */
+    margin: 10px; /* Margin around each box */
+    min-width: 200px; /* Minimum width for each box */
+    max-width: 300px; /* Maximum width for each box */
+}
+
+h3 {
+    margin-bottom: 15px; /* Spacing below headings */
+    font-size: 18px; /* Font size for headings */
+}
+
+a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Each link in a block */
+    margin-bottom: 10px; /* Spacing between links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Spacing above the image */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .box-con {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center; /* Center align boxes */
+    }
+}
+
+/* Header Styles */
+header {
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    background-color: aliceblue; /* Light background */
+    padding: 2rem 9%; /* Padding for header */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    z-index: 1000; /* Ensure it is on top */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Logo Styles */
+header .logo {
+    font-size: 3rem; /* Logo font size */
+    color: #333; /* Dark color */
+    font-weight: bolder; /* Bolder text */
+}
+
+header .logo span {
+    color: pink; /* Color for logo span */
+}
+
+/* Navbar Styles */
+header .navbar a {
+    font-size: 2rem; /* Navbar link font size */
+    padding: 0 1.5rem; /* Padding for links */
+    color: #666; /* Grey color */
+    display: flex; /* Flex layout */
+}
+
+header .navbar a:hover {
+    background-color: plum; /* Hover background for links */
+}
+
+/* Icon Styles */
+header .icon a {
+    font-size: 1.5rem; /* Icon link font size */
+    color: #333; /* Dark color */
+    margin-left: 2rem; /* Spacing between icons */
+}
+
+header .icon a:hover {
+    color: rgb(122, 23, 122); /* Hover color for icons */
+}
+
+/* Toggler Styles */
+header #toggler {
+    display: none; /* Hide toggler by default */
+}
+
+header .fa-bars {
+    font-size: 3rem; /* Font size for toggle icon */
+    color: #333; /* Dark color */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 0.5rem 1.5rem; /* Padding for toggle icon */
+    cursor: pointer; /* Pointer cursor */
+    display: none; /* Hide by default */
+}
+
+  /* Home section styling */
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('pexels-tara-winstead-7663164.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+  }
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color:black;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: rgb(163, 55, 140);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.home .content span{
+    font-size: 3.5rem;
+    color: rgb(163, 55, 140);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color:#333333f5;
+   padding: 0.5rem 1rem; /* Padding around text */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* General section styling */
+.about {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+
+.about .heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.about .heading span {
+    color: #3DCFD3;
+}
+
+/* Flexbox layout for image and content */
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about .content {
+    flex: 1 1 55%;
+    padding: 20px;
+}
+
+.about .content h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about .content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about .content a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3DCFD3;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.about .content a.btn:hover {
+    background-color: #34b8b8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column;
+    }
+
+    .about .image, 
+    .about .content {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .about .content {
+        padding: 10px;
+    }
+
+    .about .image img {
+        max-width: 300px;
+    }
+}
+
+
+.icon-conta {
+    display: flex;
+    justify-content: space-around; /* Distributes icons evenly */
+    flex-wrap: wrap; /* Allows icons to wrap to the next line on smaller screens */
+    padding: 2rem; /* Adds padding around the section */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.icons {
+    display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center the content */
+    margin: 1rem; /* Adds space around each icon */
+    text-align: center; /* Center text inside the icon container */
+}
+
+.icons a {
+    font-size: 3rem; /* Size of the icon */
+    color: #333; /* Icon color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.icons a:hover {
+    color: #ff6f61; /* Change color on hover */
+}
+
+.info {
+    margin-top: 0.5rem; /* Space between icon and text */
+}
+
+.info h3 {
+    font-size: 1.5rem; /* Size of the heading */
+    color: #333; /* Heading color */
+    margin: 0.5rem 0; /* Space around the heading */
+}
+
+.info span {
+    font-size: 1rem; /* Size of the subtitle */
+    color: #666; /* Subtitle color */
+}
+
+
+.product {
+    padding: 3rem 2rem; /* Padding for the section */
+    text-align: center; /* Center text */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.product .heading {
+    font-size: 2.5rem; /* Main heading size */
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 2rem; /* Space below the heading */
+}
+
+.product .box-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center the boxes */
+    flex-wrap: wrap; /* Wrap boxes on smaller screens */
+    gap: 2rem; /* Space between boxes */
+}
+
+.product .box {
+    position: relative; /* Position relative for absolute elements */
+    border: 1px solid #ddd; /* Border around product boxes */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.product .box:hover {
+    transform: scale(1.05); /* Slightly scale on hover */
+}
+
+.product .discount {
+    position: absolute; /* Position discount label */
+    top: 1rem; /* Distance from top */
+    left: 1rem; /* Distance from left */
+    background: red; /* Background color for discount */
+    color: #fff; /* White text */
+    padding: 0.5rem 1rem; /* Padding for discount label */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.product img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Border below the image */
+}
+
+.product .icons {
+    display: flex; /* Flexbox for icons */
+    justify-content: center; /* Center icons */
+    gap: 1rem; /* Space between icons */
+    padding: 1rem; /* Padding around icons */
+}
+
+.product .fas {
+    font-size: 1.5rem; /* Icon size */
+    color: #333; /* Icon color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.product .fas:hover {
+    color: #ff6f61; /* Change color on hover */
+}
+
+.product .content {
+    padding: 1rem; /* Padding for content */
+}
+
+.product .price {
+    font-size: 1.5rem; /* Price font size */
+    color: #e74c3c; /* Color for discounted price */
+}
+
+.product .price span {
+    text-decoration: line-through; /* Strikethrough for original price */
+    color: #777; /* Grey color for original price */
+}
+/* Review Section Styling */
+.review {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.review .heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.review .heading span {
+    color: #ff6f61;
+}
+
+.review .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review .box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex-basis: calc(33% - 40px);
+    box-sizing: border-box;
+}
+
+.review .box .stars {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.review .box .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review .box .user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review .box .user h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.review .box .user span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.review .box p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+/* Contact Section Styling */
+.contact {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.contact .main-text span {
+    color: #ff6f61;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contact .main-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 10px 0 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, 
+.contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact form input:focus, 
+.contact form textarea:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+.contact .btn-box .btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn-box .btn:hover {
+    background-color: #e65a50;
+}
+
+
+
+#successMessage {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/* Footer Styles */
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Padding for the footer */
+    max-width: 1200px; /* Maximum width of the footer */
+    margin: auto; /* Center the footer */
+}
+
+.box-con {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space out boxes evenly */
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+}
+
+.box {
+    flex: 1; /* Flex property for responsive boxes */
+    margin: 10px; /* Margin around each box */
+    min-width: 200px; /* Minimum width for each box */
+    max-width: 300px; /* Maximum width for each box */
+}
+
+h3 {
+    margin-bottom: 15px; /* Spacing below headings */
+    font-size: 18px; /* Font size for headings */
+}
+
+a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Each link in a block */
+    margin-bottom: 10px; /* Spacing between links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Spacing above the image */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .box-con {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center; /* Center align boxes */
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact .main-text h1 {
+        font-size: 2rem;
+    }
+
+    .contact form input, 
+    .contact form textarea {
+        max-width: 100%;
+    }
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Media query for screens smaller than 991px */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left; /* Align background for smaller screens */
+    }
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block; /* Show the menu icon */
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        max-height: 0; /* Start hidden */
+        overflow: hidden; /* Hide overflow */
+        transition: max-height 0.5s ease-in-out; /* Smooth transition */
+    }
+
+    header #toggler:checked ~ .navbar {
+        max-height: 500px; /* Revealing navbar height */
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: block; /* Block display for links */
+    }
+
+    .home .content {
+        font-size: 5rem; /* Adjust content size for smaller screens */
+    }
+
+    .home .span {
+        font-size: 2.5rem; /* Adjust span size */
+    }
+
+    input[type="checkbox"] {
+        display: none; /* Hide checkbox */
+    }
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .icons {
+        margin: 0.5rem; /* Reduce margin for smaller screens */
+    }
+    
+    .icons a {
+        font-size: 2.5rem; /* Smaller icon size on smaller screens */
+    }
+    
+    .info h3 {
+        font-size: 1.25rem; /* Smaller heading size */
+    }
+    
+    .info span {
+        font-size: 0.9rem; /* Smaller subtitle size */
+    }
+}
